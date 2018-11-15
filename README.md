@@ -15,6 +15,7 @@ The **Rasa stack** is made of two libraries, RASA NLU and RASA Core.
 - Open Source : no vendor lock-in. Can be used in commercial projects as well. You don't depend on Facebook or Google.
 
 ## How to run?
-`make train-nlu`
-`make train-core`
-`make run` or `make api` to use it as an API for your website.
+`pip install -r requirements.txt`
+`make train-nlu` &&
+`make train-core`&&
+`make run` || `make api` to use it as an API for your website.
