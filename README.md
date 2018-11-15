@@ -2,11 +2,11 @@
 POC of a RASA Core bot with some basic intent/form/action workflow
 
 ## What is RASA?
-The Rasa stack is made of two libraries, RASA NLU and RASA Core.
+The **Rasa stack** is made of two libraries, RASA NLU and RASA Core.
 
-*Rasa NLU* is an open source NLP (Natural Language Processing) tool for intent classification and entity extraction. Rasa is a set of high level APIs for building your own language parser using existing NLP and ML libraries such as Spacy, Sklearn, Mitie and TenserFlow.
+**RASA NLU** is an open source NLP (Natural Language Processing) tool for intent classification and entity extraction. Rasa is a set of high level APIs for building your own language parser using existing NLP and ML libraries such as Spacy, Sklearn, Mitie and TenserFlow.
 
-*Rasa Core* is an open source tool to build the dialogue flow of your bots with full control.
+**RASA Core** is an open source tool to build the dialogue flow of your bots with full control.
 
 ## Why RASA?
 
