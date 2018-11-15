@@ -1,0 +1,89 @@
+intents:
+  - request_contact:
+      use_entities: false
+  - greet
+  - goodbye
+  - thanks
+  - deny
+  - my_name_is
+  - inform
+  - affirm
+  - my_email
+
+entities:
+  - name
+  - email
+  - message
+
+slots:
+  name:
+    type: text
+  email:
+    type: text
+    auto_fill: false
+  message:
+    type: unfeaturized
+    auto_fill: false
+  requested_slot:
+    type: unfeaturized
+
+templates: 
+  utter_name:
+  - text: "Salut, comment t'appelles-tu ?"
+  - text: "Hey! A qui ai-je plaisir de m'adresser ?"
+  - text: "Coucou! Comment dois-je t'appeler ?"
+
+  utter_greet:
+  - text: "Enchanté {name}. Que puis-je faire pour toi ?"
+  - text: "Super {name}. En quoi puis-je t'être utile ?"
+  - text: "Salut {name}, quel est l'objet de ton message ?"
+
+  utter_goodbye:
+  - text: "Au revoir !"
+  - text: "Bonne journée !"
+  - text: "A bientôt !"
+  - text: "A bientôt, j'espère !"
+  
+  utter_thanks:
+  - text: "Le plaisir est pour moi"
+  - text: "Merci à toi d'avoir essayé mon bot !"
+
+  utter_default:
+  - text: "Désolé, je ne suis pas sûr d'avoir bien compris. Peux-tu reformuler ton message ?"
+  - text: "Désolé, je ne suis qu'un robot et parfois je ne comprends pas très bien les humains. Serait-il possible de reformuler le message pour m'aider ?"
+  - text: "Désolé, je n'ai pas compris. Peux-tu reformuler ?"
+  
+  utter_ask_message:
+  - text: "D'accord. Quel est le message que tu veux envoyer à Jonathan ?"
+  - text: "Bien reçu. Quel message veux-tu transmettre à Jonathan ?"
+  - text: "OK! Quel message dois-je envoyer à Jonathan ?"
+
+  utter_ask_email:
+  - text: "C'est dans la boîte. A quelle adresse email souhaites-tu qu'il te réponde ?"
+  - text: "Parfait. A quelle adresse email souhaites-tu qu'il te recontacte ?"
+  - text: "Reçu 5/5. A quelle adresse email souhaites-tu être recontacté ?"
+
+  utter_message_sent:
+  - text: "Super, {name}. Le message est envoyé ! Il te recontactera sur ton adresse {email}"
+
+  utter_slots_values:
+    - text: "got slots:\n
+             - message: {message}\n
+             - email: {email}"
+
+actions:
+- utter_name
+- utter_thanks
+- utter_greet
+- utter_default
+- utter_goodbye
+- action_joke
+- action_contact
+- utter_ask_message
+- utter_ask_email
+- utter_message_sent
+- utter_understood
+- utter_slots_values
+
+forms:
+  - contact_form

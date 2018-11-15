@@ -1,0 +1,10 @@
+venv
+models
+*credentials.py
+
+*.log
+*.dot
+__pycache__
+.vscode
+
+
