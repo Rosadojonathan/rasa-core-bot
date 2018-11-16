@@ -12,6 +12,8 @@ intents:
   - insulting
   - question
   - request_question
+  - ok
+  - rien
 
 entities:
   - name
@@ -57,6 +59,10 @@ templates:
   - text: "Super {name}. En quoi puis-je t'être utile ?"
   - text: "Salut {name}, quel est l'objet de ton message ?"
 
+  utter_anything_else:
+  - text: "Qu'est-ce que je peux faire d'autre pour toi ?"
+  - text: "Ce sera tout ?"
+
   utter_goodbye:
   - text: "Au revoir !"
   - text: "Bonne journée !"
@@ -87,6 +93,12 @@ templates:
   - text: "A quelle question puis-je répondre ?"
   - text: "Oui, dis moi ta question"
 
+  utter_suit_yourself:
+    - text: "Okay, ça marche"
+    - text: "Comme tu veux !"
+    - text: "Pas de soucis!"
+    - text: "OK. N'hésite pas si tu as besoin"
+
   utter_message_sent:
   - text: "Super. Le message est envoyé ! Il te recontactera sur ton adresse {email}"
 
@@ -102,7 +114,7 @@ templates:
     - text: "Maestro est une startup qui offre des services de réservation par mandat pour des places de concert très demandées. C'est un peu comme le Deliveroo des places de concerts très difficiles à avoir. Tu réserves nos services pour qu'on obtienne tes places et on s'occupe du reste. "
   
   utter_explanation_freelance:
-    - text: "Oui, j'ai aussi le statut autoentrepreneur pour faire des contrats en freelance. J'accepte des missions de Growth Hacking, implémentation d'outils techniques tels que des scripts d'automatisation, de récupération de données, de gestion de campagnes publicitaires ou encore d'analyse de données."
+    - text: "Oui, j'ai le statut autoentrepreneur pour faire des contrats en freelance en plus de mon activité salariée. J'accepte des missions de Growth Hacking, implémentation d'outils techniques tels que des scripts d'automatisation, de récupération de données, de gestion de campagnes publicitaires ou encore d'analyse de données."
 
   utter_no_insults_here:
     - text: "Ehoh, pas d'insultes ici"
@@ -128,6 +140,8 @@ actions:
 - utter_explanation_mon_job
 - utter_explanation_mon_entreprise
 - utter_explanation_freelance
+- utter_anything_else
+- utter_suit_yourself
 
 forms:
   - contact_form

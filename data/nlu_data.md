@@ -115,6 +115,16 @@
 - [Thomas Edison](name)
 - [James Bond](name)
 - [Thomas](name)
+- [Charlotte](name)
+- [Julie](name)
+- [Jean](name)
+- [Paul](name)
+- [Théo](name)
+- [Hugo](name)
+- [Florian](name)
+- [Elisa](name)
+- A [Alex](name)
+- A [Louise](name)
 
 
 ## intent:insulting
@@ -140,14 +150,17 @@
 - c'est quoi un [Tech-Marketer](mon_job) ?
 - c'est quoi un [Tech Marketer](mon_job) au juste ?
 - c'est quoi un [Tech Marketer](mon_job) en fait ?
+- c'est quoi ton [poste](mon_job) ?
 - c'est quoi un [Technical Marketer](mon_job) ?
 - qu'est ce que c'est un [Tech Marketer](mon_job) ?
 - qu'est ce que c'est un [Technical Marketer](mon_job) ?
 - je veux savoir ce qu'est [Tech Marketer](mon_job) ?
 - que fait [Maestro Corporation](mon_entreprise) ?
 - c'est quoi [Maestro Corporation](mon_entreprise) ?
-- c'est quoi [Maestro](mon_entreprise) ?
 - est-ce que tu fais du [freelance](freelance) ?
+- que fait ta [startup](freelance) ?
+- que fait [Maestro](mon_entreprise)
+- qu'est ce que c'est [Maestro](mon_entreprise) ?
 - effectues-tu des missions en [freelance](freelance) ?
 - es tu [freelance](freelance)?
 - fais tu du [freelance](freelance)?
@@ -163,3 +176,26 @@
 - j'ai encore une question
 - j'ai une autre question
 - je voulais te poser une question
+- j'aimerais en savoir plus sur toi
+
+
+## intent:ok
+- ok
+- ça marche
+- OK
+- okay
+- oké
+- niquel
+- bien
+- dac
+- d'accord
+- roger that
+- parfait
+
+## intent:rien
+- rien
+- rien du tout
+- non rien
+- nope
+- je n'ai besoin de rien
+- rien c'est bon

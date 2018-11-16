@@ -21,6 +21,20 @@
 * insulting
     - utter_no_insults_here
 
+## thanks
+* thanks
+    - utter_thanks
+
+## ok
+* ok
+    - utter_anything_else
+* rien
+    - utter_suit_yourself
+
+## rien
+* rien
+    - utter_suit_yourself
+
 
 ### request_contact
 * request_contact
@@ -36,7 +50,9 @@
     - slot{"email":"marakrian@gmail.com"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_slot_values
+    - action_restart
+* ok
+ - utter_anything_else
 * thanks
     - utter_thanks
 
@@ -52,6 +68,8 @@
     - form{"name":null}
     - slot{"requested_slot":null}
     - action_restart
+* ok
+ - utter_anything_else
 * thanks
     - utter_thanks
 
@@ -67,6 +85,8 @@
     - form{"name":null}
     - slot{"requested_slot":null}
     - action_restart
+* ok
+ - utter_anything_else
 * request_question
     - question_answerer_form
     - form{"name":"question_answerer_form"}
@@ -77,3 +97,5 @@
     - form{"name":null}
     - slot{"requested_slot":null}
     - action_restart
+* ok
+ - utter_anything_else
