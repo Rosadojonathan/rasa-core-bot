@@ -14,6 +14,7 @@ intents:
   - request_question
   - ok
   - rien
+  - request_joke
 
 entities:
   - name
@@ -89,6 +90,8 @@ templates:
   - text: "Reçu 5/5. A quelle adresse email souhaites-tu être recontacté ?"
 
   utter_ask_question:
+  - text: "Je t'en prie, pose moi ta question"
+  - text: "Vas y pose moi ta question"
   - text: "Quelle est la question que tu veux me poser ?"
   - text: "A quelle question puis-je répondre ?"
   - text: "Oui, dis moi ta question"
@@ -128,8 +131,9 @@ actions:
 - utter_greet
 - utter_default
 - utter_goodbye
-- action_joke
+- action_joke_generator
 - action_contact
+- action_simple_answer
 - utter_ask_message
 - utter_ask_email
 - utter_message_sent

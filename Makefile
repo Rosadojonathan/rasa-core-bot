@@ -26,7 +26,7 @@ run:
 
 api:
 	make kill-port-already-in-use && make run-actions&
-	python -m rasa_core.run --enable_api --core models/dialogue --nlu models/nlu/current --cors "*" --endpoints endpoints.yml 
+	python -m rasa_core.run --enable_api --core models/dialogue --nlu models/nlu/current --cors '*' --endpoints endpoints.yml --debug
 train-interactive:
 	python -m rasa_core.train interactive -s data/stories.md -d domain.yml -o models/dialogue -c ./default_config.yml --debug --endpoints endpoints.yml
 

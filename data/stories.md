@@ -35,8 +35,15 @@
 * rien
     - utter_suit_yourself
 
+## goodbye
+* goodbye
+    - utter_goodbye
 
-### request_contact
+## request_joke
+* request_joke
+    - action_joke_generator
+
+## request_contact
 * request_contact
     - contact_form
     - form{"name":"contact_form"}
@@ -56,8 +63,7 @@
 * thanks
     - utter_thanks
 
-### ask_question
-
+## ask_question
 * request_question
     - question_answerer_form
     - form{"name":"question_answerer_form"}
@@ -73,29 +79,33 @@
 * thanks
     - utter_thanks
 
-### ask_two_questions
+## ask_two_questions
+* request_question
+    - question_answerer_form
+    - form{"name":"question_answerer_form"}
+    - slot{"requested_slot":"question"}
+* form: inform{"question":"mon_job"}
+    - form: question_answerer_form
+    - slot{"question":"mon_job"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - action_restart
+* ok
+ - utter_anything_else
+* request_question
+    - question_answerer_form
+    - form{"name":"question_answerer_form"}
+    - slot{"requested_slot":"question"}
+* form: inform{"question":"mon_job"}
+    - form: question_answerer_form
+    - slot{"question":"mon_job"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - action_restart
+* ok
+ - utter_anything_else
 
-* request_question
-    - question_answerer_form
-    - form{"name":"question_answerer_form"}
-    - slot{"requested_slot":"question"}
-* form: inform{"question":"mon_job"}
-    - form: question_answerer_form
-    - slot{"question":"mon_job"}
-    - form{"name":null}
-    - slot{"requested_slot":null}
-    - action_restart
-* ok
- - utter_anything_else
-* request_question
-    - question_answerer_form
-    - form{"name":"question_answerer_form"}
-    - slot{"requested_slot":"question"}
-* form: inform{"question":"mon_job"}
-    - form: question_answerer_form
-    - slot{"question":"mon_job"}
-    - form{"name":null}
-    - slot{"requested_slot":null}
-    - action_restart
-* ok
- - utter_anything_else
+
+## direct_question_respond_form
+* question{"mon_job":"Tech Marketer"}
+    - action_simple_answer

@@ -199,3 +199,21 @@
 - nope
 - je n'ai besoin de rien
 - rien c'est bon
+
+
+## intent:request_joke
+- raconte moi une blague
+- dis moi une blague
+- raconte une blague
+- dis une blague
+- dit une blague
+- racontes une blague
+- je veux entendre une blague
+- j'aimerais entendre une blague
+- raconte une vanne
+- dis moi une vanne
+- raconte ta meilleure vanne
+- raconte une bonne blague
+- raconte une blague de qualité
+- j'aimerais un peu d'humour
+- j'aimerais entendre un peu d'humour
