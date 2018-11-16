@@ -147,6 +147,11 @@
 - que fait [Maestro Corporation](mon_entreprise) ?
 - c'est quoi [Maestro Corporation](mon_entreprise) ?
 - c'est quoi [Maestro](mon_entreprise) ?
+- est-ce que tu fais du [freelance](freelance) ?
+- effectues-tu des missions en [freelance](freelance) ?
+- es tu [freelance](freelance)?
+- fais tu du [freelance](freelance)?
+- est-ce que tu prends des contrats en [freelance](freelance)?
 
 ## intent:request_question
 - je voudrais te poser une question

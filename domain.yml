@@ -20,6 +20,7 @@ entities:
   - insulte
   - mon_job
   - mon_entreprise
+  - freelance
 
 slots:
   name:
@@ -34,6 +35,9 @@ slots:
     type: text
     auto_fill: false
   mon_job:
+    type: text
+    auto_fill: false
+  freelance:
     type: text
     auto_fill: false
   mon_entreprise:
@@ -96,6 +100,9 @@ templates:
   
   utter_explanation_mon_entreprise:
     - text: "Maestro est une startup qui offre des services de réservation par mandat pour des places de concert très demandées. C'est un peu comme le Deliveroo des places de concerts très difficiles à avoir. Tu réserves nos services pour qu'on obtienne tes places et on s'occupe du reste. "
+  
+  utter_explanation_freelance:
+    - text: "Oui, j'ai aussi le statut autoentrepreneur pour faire des contrats en freelance. J'accepte des missions de Growth Hacking, implémentation d'outils techniques tels que des scripts d'automatisation, de récupération de données, de gestion de campagnes publicitaires ou encore d'analyse de données."
 
   utter_no_insults_here:
     - text: "Ehoh, pas d'insultes ici"
@@ -120,6 +127,7 @@ actions:
 - utter_ask_question
 - utter_explanation_mon_job
 - utter_explanation_mon_entreprise
+- utter_explanation_freelance
 
 forms:
   - contact_form

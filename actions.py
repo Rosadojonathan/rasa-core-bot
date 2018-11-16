@@ -47,9 +47,7 @@ class ContactForm(FormAction):
                                 self.from_text()],
                 "message": [self.from_text()]}
 
-    @staticmethod
-    def mon_job_terms():
-        return ["market","tech"]
+    
 
     def validate(self, dispatcher, tracker, domain):
         # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
@@ -102,10 +100,15 @@ class QuestionAnswerer(FormAction):
     def slot_mappings(self):
         return {
             "question": [self.from_entity(entity='mon_job',intent="question"),
-            self.from_entity(entity='mon_entreprise',intent="question")]
+            self.from_entity(entity='mon_entreprise',intent="question"),
+            self.from_entity(entity='freelance',intent="question")]
 
 
         }
+
+    @staticmethod
+    def mon_job_terms():
+        return ["market","tech"]
 
     def validate(self, dispatcher, tracker, domain):
         
@@ -135,6 +138,8 @@ class QuestionAnswerer(FormAction):
                 elif "Maestro" in value:
                     slot_values[slot] = "mon_entreprise"
 
+                elif "freelance" in value:
+                    slot_values[slot] = "freelance"
         # validation succeed, set the slots values to the extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
 
