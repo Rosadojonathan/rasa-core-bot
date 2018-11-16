@@ -47,6 +47,9 @@ class ContactForm(FormAction):
                                 self.from_text()],
                 "message": [self.from_text()]}
 
+    @staticmethod
+    def mon_job_terms():
+        return ["market","tech"]
 
     def validate(self, dispatcher, tracker, domain):
         # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
@@ -71,36 +74,7 @@ class ContactForm(FormAction):
                                                "with action {1}"
                                                "".format(slot_to_fill,
                                                          self.name()))
-
-        # we'll check when validation failed in order
-        # to add appropriate utterances
-        # for slot, value in slot_values.items():
-        #     if slot == 'cuisine':
-        #         if value.lower() not in self.cuisine_db():
-        #             dispatcher.utter_template('utter_wrong_cuisine', tracker)
-        #             # validation failed, set slot to None
-        #             slot_values[slot] = None
-
-        #     elif slot == 'num_people':
-        #         if not self.is_int(value) or int(value) <= 0:
-        #             dispatcher.utter_template('utter_wrong_num_people',
-        #                                       tracker)
-        #             # validation failed, set slot to None
-        #             slot_values[slot] = None
-
-        #     elif slot == 'outdoor_seating':
-        #         if isinstance(value, str):
-        #             if 'out' in value:
-        #                 # convert "out..." to True
-        #                 slot_values[slot] = True
-        #             elif 'in' in value:
-        #                 # convert "in..." to False
-        #                 slot_values[slot] = False
-        #             else:
-        #                 dispatcher.utter_template('utter_wrong_outdoor_seating',
-        #                                           tracker)
-        #                 # validation failed, set slot to None
-        #                 slot_values[slot] = None
+   
 
         # validation succeed, set the slots values to the extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
@@ -153,7 +127,7 @@ class QuestionAnswerer(FormAction):
                                                          self.name()))
         for slot, value in slot_values.items():
             if slot == 'question':
-                if 'market' in value.lower():
+                if value.lower() in self.mon_job_terms():
                     # validation failed, set slot to None
                     slot_values[slot] = "mon_job"
 
