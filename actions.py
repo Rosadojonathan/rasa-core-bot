@@ -165,8 +165,6 @@ class QuestionAnswerer(FormAction):
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
 
     def submit(self,dispatcher, tracker, domain):
-        print('Printing question slot : {}'.format(tracker.get_slot("question")))
         explanation = "utter_explanation_{}".format(tracker.get_slot('question'))
-        print('explanation is ' + explanation)
         dispatcher.utter_template(explanation,tracker)
         return []
