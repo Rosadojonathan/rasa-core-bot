@@ -3,7 +3,7 @@
     - contact_form
     - form{"name": "contact_form"}
     - form{"name": null}
-    - utter_slots_values
+    - utter_slot_values
 * thanks
     - utter_thanks
 
@@ -16,6 +16,10 @@
 ## name
 * my_name_is{"name":"Pierre"}
     - utter_greet
+
+## insulting
+* insulting
+    - utter_no_insults_here
 
 
 ### request_contact
@@ -32,6 +36,44 @@
     - slot{"email":"marakrian@gmail.com"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_slots_values
+    - utter_slot_values
 * thanks
     - utter_thanks
+
+### ask_question
+
+* request_question
+    - question_answerer_form
+    - form{"name":"question_answerer_form"}
+    - slot{"requested_slot":"question"}
+* form: inform{"question":"mon_job"}
+    - form: question_answerer_form
+    - slot{"question":"mon_job"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - action_restart
+* thanks
+    - utter_thanks
+
+### ask_two_questions
+
+* request_question
+    - question_answerer_form
+    - form{"name":"question_answerer_form"}
+    - slot{"requested_slot":"question"}
+* form: inform{"question":"mon_job"}
+    - form: question_answerer_form
+    - slot{"question":"mon_job"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - action_restart
+* request_question
+    - question_answerer_form
+    - form{"name":"question_answerer_form"}
+    - slot{"requested_slot":"question"}
+* form: inform{"question":"mon_job"}
+    - form: question_answerer_form
+    - slot{"question":"mon_job"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+    - action_restart

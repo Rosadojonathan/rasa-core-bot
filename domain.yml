@@ -9,11 +9,17 @@ intents:
   - inform
   - affirm
   - my_email
+  - insulting
+  - question
+  - request_question
 
 entities:
   - name
   - email
   - message
+  - insulte
+  - mon_job
+  - mon_entreprise
 
 slots:
   name:
@@ -23,6 +29,15 @@ slots:
     auto_fill: false
   message:
     type: unfeaturized
+    auto_fill: false
+  question:
+    type: text
+    auto_fill: false
+  mon_job:
+    type: text
+    auto_fill: false
+  mon_entreprise:
+    type: text
     auto_fill: false
   requested_slot:
     type: unfeaturized
@@ -63,13 +78,30 @@ templates:
   - text: "Parfait. A quelle adresse email souhaites-tu qu'il te recontacte ?"
   - text: "Reçu 5/5. A quelle adresse email souhaites-tu être recontacté ?"
 
-  utter_message_sent:
-  - text: "Super, {name}. Le message est envoyé ! Il te recontactera sur ton adresse {email}"
+  utter_ask_question:
+  - text: "Quelle est la question que tu veux me poser ?"
+  - text: "A quelle question puis-je répondre ?"
+  - text: "Oui, dis moi ta question"
 
-  utter_slots_values:
+  utter_message_sent:
+  - text: "Super. Le message est envoyé ! Il te recontactera sur ton adresse {email}"
+
+  utter_slot_values:
     - text: "got slots:\n
              - message: {message}\n
              - email: {email}"
+
+  utter_explanation_mon_job:
+    - text: "Un Technical Marketer c'est un peu comme un Growth Hacker. C'est un Marketer très technique qui code beaucoup. La différence avec le Growth Hacker c'est que ce dernier ne code que parce que c'est l'activité la plus pertinente à l'instant T. Pas parce qu'il a une appétence particulière pour le code. Si demain ce qui est le plus pertinent pour une entreprise c'est faire de la vidéo, il se mettra à faire des vidéos. Le Technical Marketer a un intérêt plus 'pur', par l'aspect technique."
+  
+  utter_explanation_mon_entreprise:
+    - text: "Maestro est une startup qui offre des services de réservation par mandat pour des places de concert très demandées. C'est un peu comme le Deliveroo des places de concerts très difficiles à avoir. Tu réserves nos services pour qu'on obtienne tes places et on s'occupe du reste. "
+
+  utter_no_insults_here:
+    - text: "Ehoh, pas d'insultes ici"
+    - text: "Pshit ! Pas d'insultes, ceci est un chatbot poli !"
+    - text: "C'est celui qui dit qui l'est."
+    - text: "Toi même."
 
 actions:
 - utter_name
@@ -83,7 +115,12 @@ actions:
 - utter_ask_email
 - utter_message_sent
 - utter_understood
-- utter_slots_values
+- utter_slot_values
+- utter_no_insults_here
+- utter_ask_question
+- utter_explanation_mon_job
+- utter_explanation_mon_entreprise
 
 forms:
   - contact_form
+  - question_answerer_form

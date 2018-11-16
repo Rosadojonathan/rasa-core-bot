@@ -5,8 +5,8 @@ pipeline:
 - name: intent_featurizer_count_vectors
   token_pattern: (?u)\b\w+\b
 - name: intent_classifier_tensorflow_embedding
-- name: ner_duckling_http
-  url: http://localhost:8000
-  dimensions:
-  - number
-language: en
+# - name: ner_duckling_http
+#   url: http://localhost:8000
+#   dimensions:
+#   - number
+language: fr

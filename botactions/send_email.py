@@ -7,7 +7,7 @@ def send_email(user_address,message):
     msg = MIMEMultipart()
     msg['From'] = user_address
     msg['To'] = "jonathan.emil.rosado@gmail.com"
-    msg['Subject'] = "[jonathanrosado.fr] Message chatbot de ${user_address}"
+    msg['Subject'] = "[jonathanrosado.fr] Message chatbot de {}".format(user_address)
     
     body = message
     msg.attach(MIMEText(body, 'plain'))

@@ -75,6 +75,10 @@
 - je te remercie
 - Merci
 - mercé jul
+- milles merci
+- thanks
+- thanks buddy
+- muchas gracias
 
 
 ## intent:my_name_is
@@ -107,3 +111,50 @@
 - [Agathe](name)
 - [Eric](name)
 - [Mélanie](name)
+- [Franck](name)
+- [Thomas Edison](name)
+- [James Bond](name)
+- [Thomas](name)
+
+
+## intent:insulting
+- gros [con](insulte)
+- espèce d' [enfoiré](insulte)
+- petit [con](insulte)
+- [connard](insulte)
+- gros [connard](insulte)
+- espèce de [raclure](insulte)
+- t'es qu'une [enflure](insulte)
+- tête de [bite](insulte)
+- ton bot c'est de la [merde](insulte)
+- fils de [pute](insulte)
+- ta mère la [chienne](insulte)
+- [fdp](insulte) va
+- t'es vraiment [con](insulte)
+- t'es qu'un petit [con](insulte)
+- t'es qu'un gros [con](insulte)
+
+
+## intent:question
+- c'est quoi un [Tech Marketer](mon_job) ?
+- c'est quoi un [Tech-Marketer](mon_job) ?
+- c'est quoi un [Tech Marketer](mon_job) au juste ?
+- c'est quoi un [Tech Marketer](mon_job) en fait ?
+- c'est quoi un [Technical Marketer](mon_job) ?
+- qu'est ce que c'est un [Tech Marketer](mon_job) ?
+- qu'est ce que c'est un [Technical Marketer](mon_job) ?
+- je veux savoir ce qu'est [Tech Marketer](mon_job) ?
+- que fait [Maestro Corporation](mon_entreprise) ?
+- c'est quoi [Maestro Corporation](mon_entreprise) ?
+- c'est quoi [Maestro](mon_entreprise) ?
+
+## intent:request_question
+- je voudrais te poser une question
+- je voulais te demander un truc
+- j'ai une petite question
+- j'ai une question
+- je peux te poser une question?
+- juste pour te demander un truc
+- j'ai encore une question
+- j'ai une autre question
+- je voulais te poser une question
