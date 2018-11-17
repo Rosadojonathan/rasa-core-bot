@@ -1,8 +1,7 @@
 # rasa-core-bot
 POC of a RASA Core bot with some basic intent/form/action workflow
 
-![chatbot]("https://user-images.githubusercontent.com/25138966/48663997-52ce9900-ea98-11e8-8e3b-e95fb04ca4df.jpg")
-
+![chatbot](chatbot.jpg)
 ## What is RASA?
 The **Rasa stack** is made of two libraries, RASA NLU and RASA Core.
 
