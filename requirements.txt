@@ -99,5 +99,4 @@ wcwidth==0.1.7
 webexteamssdk==1.0.3
 websocket-client==0.54.0
 Werkzeug==0.14.1
-xgboost==0.7
 zope.interface==4.6.0

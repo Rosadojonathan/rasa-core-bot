@@ -130,22 +130,22 @@ class QuestionAnswerer(FormAction):
                                                "with action {1}"
                                                "".format(slot_to_fill,
                                                          self.name()))
-        for slot, value in slot_values.items():
-            if slot == 'question':
-                if "market" in value.lower():
-                    # validation failed, set slot to None
-                    slot_values[slot] = "mon_job"
+        # for slot, value in slot_values.items():
+        #     if slot == 'question':
+        #         if "market" in value.lower():
+        #             # validation failed, set slot to None
+        #             slot_values[slot] = "mon_job"
             
-                elif "maestro" in value.lower():
-                    slot_values[slot] = "mon_entreprise"
+        #         elif "maestro" in value.lower():
+        #             slot_values[slot] = "mon_entreprise"
 
-                elif "freelance" in value.lower():
-                    slot_values[slot] = "freelance"
+        #         elif "freelance" in value.lower():
+        #             slot_values[slot] = "freelance"
         # validation succeed, set the slots values to the extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
 
     def submit(self,dispatcher, tracker, domain):
-        explanation = "utter_explanation_{}".format(tracker.get_slot('question'))
+        explanation = "utter_explanation_{}".format(tracker.latest_message['entities'][0]['entity'])
         dispatcher.utter_template(explanation,tracker)
         return []
 

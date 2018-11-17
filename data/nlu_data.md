@@ -147,16 +147,20 @@
 
 ## intent:question
 - c'est quoi un [Tech Marketer](mon_job) ?
+- c'est quoi un [tech marketer](mon_job) ?
 - c'est quoi un [Tech-Marketer](mon_job) ?
+- kezako un [tech-marketer](mon_job) ?
 - c'est quoi un [Tech Marketer](mon_job) au juste ?
 - c'est quoi un [Tech Marketer](mon_job) en fait ?
 - c'est quoi ton [poste](mon_job) ?
 - c'est quoi un [Technical Marketer](mon_job) ?
+- Peux tu m'expliquer ce qu'est un [technical marketer](mon_job) ?
 - qu'est ce que c'est un [Tech Marketer](mon_job) ?
 - qu'est ce que c'est un [Technical Marketer](mon_job) ?
 - je veux savoir ce qu'est [Tech Marketer](mon_job) ?
 - que fait [Maestro Corporation](mon_entreprise) ?
 - c'est quoi [Maestro Corporation](mon_entreprise) ?
+- c'est quoi [maestro](mon_entreprise) ?
 - est-ce que tu fais du [freelance](freelance) ?
 - que fait ta [startup](freelance) ?
 - que fait [Maestro](mon_entreprise)
