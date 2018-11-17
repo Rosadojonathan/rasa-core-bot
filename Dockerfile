@@ -24,8 +24,8 @@ RUN apt-get update -qq && \
 WORKDIR /app
 COPY requirements.txt Makefile stories.md nlu_data.md nlu_tensorflow.yml default_config.yml domain.yml ./
 
-RUN  pip install -r requirements.txt
-RUN make train-both-nlu-core
+RUN  pip install -r requirements.txt \
+    && make train-both-nlu-core
 
 ADD . .
 EXPOSE 5005
