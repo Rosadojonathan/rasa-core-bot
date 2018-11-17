@@ -41,5 +41,5 @@ kill-port-already-in-use:
 	sudo lsof -t -i tcp:5055 | xargs kill -9
 
 train-both-nlu-core:
-	python -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data ./data/nlu_data.md -o models --project nlu --verbose&
-	python -m rasa_core.train -s ./data/stories.md -d domain.yml -o models/dialogue -c ./default_config.yml --debug
+	python -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data ./nlu_data.md -o models --project nlu --verbose&
+	python -m rasa_core.train -s ./stories.md -d domain.yml -o models/dialogue -c ./default_config.yml --debug
