@@ -22,12 +22,16 @@ RUN apt-get update -qq && \
   mkdir /app
 
 WORKDIR /app
+ADD models /models
 COPY requirements.txt Makefile stories.md nlu_data.md nlu_tensorflow.yml default_config.yml domain.yml ./
 
-RUN  pip install -r requirements.txt \
-    && make train-both-nlu-core
-
+RUN  pip install -r requirements.txt
 ADD . .
+VOLUME ["/app/models", "/app/config", "/app/project"]
 EXPOSE 5005
+
+# ENTRYPOINT ["./entrypoint.sh"]
+# CMD ["start", "-d", "./dialogue"]
+
 CMD ["make","api"]
 
